@@ -45,7 +45,7 @@ public class Authentication {
 		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("pass");
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/div[1]/form/div[3]/div/div/span/button"))
 				.click();
-		Test.log(LogStatus.FAIL, "Enter Valid User Name and Password");
+		Test.log(LogStatus.FAIL, "Invalid User Name and Password");
 		report.endTest(Test);
 
 		try {
@@ -75,6 +75,8 @@ public class Authentication {
 		}
 
 	}
+	
+	
 
 	@AfterMethod
 	public void close() {
